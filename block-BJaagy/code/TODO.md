@@ -12,6 +12,18 @@ function add(a,b){
    - An array of numbers/string/boolean etc
    - A 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
 
+function map(arr, cb) {
+let final = [];
+   for(let elm of arr) {
+   final.push(cb(elm))
+   }
+   return final
+}
+
+function multiply(num){
+ return  num*2
+}
+
 Have `map` return a new array filled with values that are the result of the 'callback' function on each element of the input array.
 
 ```js
