@@ -11,6 +11,7 @@ forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
   console.log(name + name, i, arr)
 );
 ```
+arr.reduce(){}
 
 2. Implement `map` array method using Array.reduce
 
