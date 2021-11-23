@@ -67,3 +67,9 @@ let counter = function () {
   return increment();
 };
 ```
+
+
+EC counter
+
+
+
