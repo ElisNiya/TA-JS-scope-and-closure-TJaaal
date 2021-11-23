@@ -1,6 +1,8 @@
 1. What does thread of execution means in JavaScript?
+ order of execution
 
 2. Where the JavaScript code gets executed?
+in the global execution context
 
 3. What does context means in Global Execution Context?
 
