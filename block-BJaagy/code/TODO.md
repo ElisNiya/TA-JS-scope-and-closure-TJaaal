@@ -1,5 +1,11 @@
 1. Create a function by your choice that accepts a callback function.
+function higher(4, 5){
+   return add()
+}
 
+function add(a,b){
+   return a+b
+}
 2. Create a function by you choice that returns a function reference.
 
 3. Create a higher order function called `map` that takes two inputs:
