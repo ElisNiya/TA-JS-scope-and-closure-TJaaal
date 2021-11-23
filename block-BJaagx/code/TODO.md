@@ -14,10 +14,10 @@ function addFive(n) {
   return n + 5;
 }
 function multiplyBy5(n) {
-  return n * 5;
+  return n * 5;  // cb
 }
-let numbersAddedFive = multiplyArrayByN(marks, addFive);
-let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
+let numbersAddedFive = multiplyArrayByN(marks, addFive);  - high
+let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5); - high
 ```
 
 2. Create the execution context diagram of the above code snippet
