@@ -55,13 +55,13 @@ function makeCounter() {
 let counter1 = makeCounter();
 let counter2 = makeCounter();
 
-console.log(counter1.value());  // OUTPUT
+console.log(counter1.value());  // 0
 
 counter1.increment();
 counter1.increment();
-console.log(counter1.value()); // OUTPUT
+console.log(counter1.value()); // 2
 
 counter1.decrement();
-console.log(counter1.value()); // OUTPUT
-console.log(counter2.value()); // OUTPUT
+console.log(counter1.value()); // 1
+console.log(counter2.value()); // 0
 ```
