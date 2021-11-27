@@ -7,7 +7,7 @@ For Example:
 1.
 
 ```js
-var username = 'Arya';
+let username = 'Arya';
 let brothers = ['John', 'Ryan', 'Bran'];
 
 console.log(username, brothers[0]);
@@ -17,7 +17,7 @@ function sayHello(name) {
 }
 
 let message = sayHello(username);
-var nextMessage = sayHello('Test');
+let nextMessage = sayHello('Test');
 ```
 
 <!-- Answer -->
