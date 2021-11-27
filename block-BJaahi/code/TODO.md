@@ -65,6 +65,24 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+
+//Declaration
+
+var username = undefined;
+let number;
+fn sayHello(name){
+
+return `Hello ${name}`;
+}
+
+let message = undefined
+
+//Execution
+console.log(username, numbers);
+var username = 'Arya';
+let number = 21;
+ message = sayHello(username);
+ nextMessage = sayHello('Test');
 ```
 
 3.
