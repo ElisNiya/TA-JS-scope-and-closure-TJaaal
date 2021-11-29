@@ -6,7 +6,9 @@ The returned function accepts a sentence. If the sentence contains the `fromWord
 
 ```js
 function censor(fromWord, toWord) {
-
+    return function(sentence){
+      return sentence.replace(fromWord, toWord); 
+    }
   
 }
 
@@ -22,11 +24,25 @@ censorQuote(`all men must die`); // all men must live
 The returned function either accepts two parameter or one parameter.
 
 - When you pass two parameter it adds the words to an array something like `'World', 'Sam'` and does not return anything.
-- When you pass one parameter it should return a string with words replaced with the required words.
+- When you pass one parameter it should return a string with words replaced with the required words given as parameter 
 
 ```js
 function multipleCensor() {
-  //  Your code goes here
+let words = [];
+    return function(params){
+        if(params.length ===1) {
+          let quote = params[0];
+          words.forEach(pair => {
+            quote.replace(pair[0], pair[1])
+        })
+        } else if(params.length === 2 ){
+            words.push(params);
+        } else {
+           alert('Nr invalid')
+        }
+    
+    }
+  
 }
 
 let censorQuote = multipleCensor();
@@ -50,8 +66,21 @@ The returned function accepts one parameter.
 - If the parameter is the same as the password it will return the object in which we stored the values.
 
 ```js
-function createCache() {
-  // Your code goes here
+function createCache(cb, pass) {
+  let obj = {};
+    return function(parameter){
+      if(parameter !== pass) {
+      
+              if(obj[param]){
+                return obj[param]
+              } else{
+                 obj[param] = cb(parameter);
+                 return cb(param)
+              }
+      } else {
+        return obj;
+      }
+    }
 }
 
 function add10(num) {
@@ -67,24 +96,4 @@ addCache(1); // 11
 addCache('foo'); // {12: 22, 100: 110, 1: 11}
 ```
 
-4. Change the above function in such a way that when the returned function is called with any other value than password. It should first check the object where we are storing the argument and return value. If the key is present return the value form the object itself. Otherwise call the callback function with the parameter.
 
-```js
-function createCache() {
-  // Your code goes here
-}
-
-function add10(num) {
-  return num + 10;
-}
-
-let addCache = createCache(add10, 'foo');
-
-addCache(12); // 22
-addCache(100); // 110
-addCache(100); // 110 (callback should not be called)
-addCache(100); // 110 (callback should not be called)
-addCache(1); // 11
-
-addCache('foo'); // {12: 22, 100: 110, 1: 11}
-```
