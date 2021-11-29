@@ -2,9 +2,10 @@
 
 ```js
 function intersection(arrays) {
-arrays.reduce((acc,cv) =>{
-  
-})
+  arrays.reduce((acc,cv) =>{
+    acc = acc.filter(elm => cv.includes(elm));
+    return acc;
+  })
 }
 
 // Test
@@ -21,7 +22,11 @@ console.log(
 
 ```js
 function union(arrays) {}
-
+  return arrays.reduce((acc,cv)){
+     acc = acc.filter((elm) => cv.includes(elm))
+     
+     return acc;
+  }
 // Test
 console.log(
   union([5, 10, 15], [15, 88, 1, 5, 7], [100, 15, 10, 1, 5])
